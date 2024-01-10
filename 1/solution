@@ -1,0 +1,13 @@
+:echo 'This file is a Vim macro. Run it with `:let @x = join(readfile("PATH"), "\n")`'
+
+# remove all letters
+:%s/\a\+//g
+
+# yank first char
+0v"fy
+
+# yank last char
+$v"ly
+
+# delete line, paste first, iterate last times
+D"fp"l<C-a>
